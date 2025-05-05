@@ -55,7 +55,7 @@ npm install
 
 
 
-```
+```mermaid
 ---
 title: foodease-food-order-booking-system (Extended)
 ---
@@ -278,5 +278,4 @@ class OrderRepository {
   +delete()
 }
 ```
-  
 
