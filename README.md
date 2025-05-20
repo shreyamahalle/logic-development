@@ -44,8 +44,8 @@ git clone https://github.com/shreyamahalle/logic-development.git
 # Navigate to the project directory
 cd logic-development
 
-# Install dependencies (for Node.js-based examples)
-npm install
+# Install dependencies 
+mvn clean install
 ```  
 Shreya Mahalle 
 
