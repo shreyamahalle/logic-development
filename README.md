@@ -52,6 +52,11 @@ npm install
 - Logical puzzle solver
 
 - Predicate logic engine
+  
+Shreya Mahalle 
+
+[GitHub](https://github.com/shreyamahalle) | [LinkedIn](https://linkedin.com/in/shreyamahalle)
+
 
 
 
