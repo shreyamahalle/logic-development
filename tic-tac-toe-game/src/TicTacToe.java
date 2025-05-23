@@ -4,7 +4,7 @@ import java.util.Scanner;
 public class TicTacToe {
 
     // The grid where the game is played, represented as a 2D array
-    private static char[][] grid = new char[3][3];
+    private static final char[][] grid = new char[3][3];
 
     // The players, represented as X and O
     private static final char PLAYER_X = 'X';
@@ -20,12 +20,9 @@ public class TicTacToe {
                 grid[i][j] = ' ';
             }
         }
-
         // Start the game loop
         while (true) {
-            // Print the grid
             printGrid();
-
             // Prompt the current player to make a move
             System.out.println("Player " + currentPlayer + ", enter your move (row, col): ");
             Scanner scanner = new Scanner(System.in);
