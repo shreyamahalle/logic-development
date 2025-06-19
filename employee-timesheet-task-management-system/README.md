@@ -23,6 +23,7 @@ A real-time, enterprise-level **Spring Boot** application to manage employees, p
 ---
 
 ## 📁 Project Structure
+
 ````
 com.shreya.timesheet
 ├── controller
@@ -64,3 +65,9 @@ spring.datasource.driver-class-name=com.mysql.cj.jdbc.Driver
 # Jackson Date Format
 spring.jackson.date-format=yyyy-MM-dd
 spring.jackson.time-zone=UTC
+
+```
+Shreya Mahalle 
+
+[GitHub](https://github.com/shreyamahalle) | [LinkedIn](https://linkedin.com/in/shreyamahalle)
+
