@@ -1,9 +1,69 @@
+<!--<!DOCTYPE html>-->
+<!--<html xmlns:th="http://www.thymeleaf.org">-->
+<!--<head>-->
+<!--    <title>Hello Thymeleaf</title>-->
+<!--</head>-->
+<!--<body>-->
+<!--<h1 th:text="'Hello, ' + ${name}">Hello!</h1>-->
+<!--</body>-->
+<!--</html>-->
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
+    <meta charset="UTF-8">
     <title>Hello Thymeleaf</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #f5f7fa, #c3cfe2);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .container {
+            background-color: #ffffff;
+            padding: 40px 60px;
+            border-radius: 15px;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 36px;
+            color: #333;
+        }
+
+        p {
+            font-size: 18px;
+            color: #666;
+            margin-top: 10px;
+        }
+
+        .button {
+            margin-top: 20px;
+            padding: 10px 25px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 16px;
+            text-decoration: none;
+        }
+
+        .button:hover {
+            background-color: #45a049;
+        }
+    </style>
 </head>
 <body>
-<h1 th:text="'Hello, ' + ${name}">Hello!</h1>
+<div class="container">
+    <h1 th:text="'Hello, ' + ${name} + ' 👋'">Hello!</h1>
+    <p>Welcome to your Spring Boot + Thymeleaf app!</p>
+    <a href="#" class="button">Explore More</a>
+</div>
 </body>
 </html>
