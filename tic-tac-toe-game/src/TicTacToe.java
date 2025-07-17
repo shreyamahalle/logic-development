@@ -1,4 +1,3 @@
-
 import java.util.Scanner;
 
 public class TicTacToe {
@@ -91,12 +90,9 @@ public class TicTacToe {
         }
 
         // Check for diagonal wins
-        if (isDiag1Win() || isDiag2Win()) {
-            return true;
-        }
+        return isDiag1Win() || isDiag2Win();
 
         // If none of the above checks passed, there is no winner
-        return false;
     }
 
     // Check if the given row has a winning combination
