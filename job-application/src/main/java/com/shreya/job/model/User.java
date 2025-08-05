@@ -1,13 +1,13 @@
 package com.shreya.job.model;
 
 public class User {
-    int id;
-    String fName;
-    String lName;
-    String mobileNo;
-    String mailId;
-    String position;
-    String resume;
+    public int id;
+    public String fName;
+    public String lName;
+    public String mobileNo;
+    public String mailId;
+    public String position;
+    public String resume;
 
     public int getId() {
         return id;
@@ -63,19 +63,6 @@ public class User {
 
     public void setResume(String resume) {
         this.resume = resume;
-    }
-
-    @Override
-    public String toString() {
-        return "User{" +
-                "id=" + id +
-                ", fName='" + fName + '\'' +
-                ", lName='" + lName + '\'' +
-                ", mobileNo='" + mobileNo + '\'' +
-                ", mailId='" + mailId + '\'' +
-                ", position='" + position + '\'' +
-                ", resume='" + resume + '\'' +
-                '}';
     }
 }
 

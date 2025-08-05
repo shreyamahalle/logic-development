@@ -1,7 +1,7 @@
 package com.shreya.job.model;
 
 public class Review {
-    int id;
-    String Heading;
-    int star;
+    public int id;
+    public String Heading;
+    public int star;
 }
