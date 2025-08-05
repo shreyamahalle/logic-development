@@ -6,7 +6,7 @@ import java.util.Scanner;
 
 public class UserService {
 
-    public void acceptUserData() {
+    public User acceptUserData() {
         Scanner scanner = new Scanner(System.in);
         System.out.println("please enter user id:");
         //int id = scanner.nextInt();
@@ -32,9 +32,6 @@ public class UserService {
         user.mobileNo = mobileNo;
         user.position = position;
         user.resume = resume;
-
-        System.out.println("User Details are : " + user);
-
-
+        return user;
     }
 }

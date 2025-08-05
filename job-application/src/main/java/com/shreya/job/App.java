@@ -1,5 +1,7 @@
 package com.shreya.job;
 
+import com.shreya.job.model.Review;
+import com.shreya.job.model.User;
 import com.shreya.job.service.ReviewService;
 import com.shreya.job.service.UserService;
 
@@ -8,9 +10,12 @@ public class App {
         System.out.println("Job Application System!");
 
         UserService userService = new UserService();
-        userService.acceptUserData();
+        User user = userService.acceptUserData();
 
         ReviewService reviewService = new ReviewService();
-        reviewService.reviewData();
+        Review review = reviewService.reviewData();
+
+        System.out.println("User info is: " + user);
+        System.out.println("Review is: " + review);
     }
 }

@@ -64,6 +64,19 @@ public class User {
     public void setResume(String resume) {
         this.resume = resume;
     }
+
+    @Override
+    public String toString() {
+        return "User{" +
+                "id=" + id +
+                ", fName='" + fName + '\'' +
+                ", lName='" + lName + '\'' +
+                ", mobileNo='" + mobileNo + '\'' +
+                ", mailId='" + mailId + '\'' +
+                ", position='" + position + '\'' +
+                ", resume='" + resume + '\'' +
+                '}';
+    }
 }
 
 

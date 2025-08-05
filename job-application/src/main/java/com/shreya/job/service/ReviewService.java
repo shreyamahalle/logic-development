@@ -5,7 +5,7 @@ import java.util.Scanner;
 
 public class ReviewService {
 
-    public void reviewData() {
+    public Review reviewData() {
 
         Scanner scanner = new Scanner(System.in);
         System.out.println("plz enter review");
@@ -23,6 +23,6 @@ public class ReviewService {
         review.id = id;
         review.heading = heading;
         review.star = star;
-        System.out.println("Review is " + review);
+        return review;
     }
 }
