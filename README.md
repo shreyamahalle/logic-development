@@ -1,6 +1,8 @@
 # 🧠 Logic Development
 
-Welcome to the **Logic Development** repository – a curated space dedicated to exploring and building logic-based systems, algorithms, and tools. Whether you're experimenting with symbolic logic, logical programming, or developing reusable logic components, this repository is your launchpad for innovation and learning.
+Welcome to the **Logic Development** repository – a curated space dedicated to exploring and building logic-based
+systems, algorithms, and tools. Whether you're experimenting with symbolic logic, logical programming, or developing
+reusable logic components, this repository is your launchpad for innovation and learning.
 
 ---
 
@@ -25,6 +27,7 @@ This project aims to:
 ---
 
 💡 Examples
+
 - Here are a few cool examples included:
 
 - Truth table generator
@@ -48,7 +51,8 @@ cd logic-development
 mvn clean install
 
 ```  
-Shreya Mahalle 
+
+Shreya Mahalle
 
 [GitHub](https://github.com/shreyamahalle) | [LinkedIn](https://linkedin.com/in/shreyamahalle)
 

@@ -3,11 +3,11 @@
 <head><title>Student Form</title></head>
 <body>
 <h2 th:text="${student.id == null} ? 'Add Student' : 'Edit Student'"></h2>
-<form th:action="@{/save}" th:object="${student}" method="post">
-    <input type="hidden" th:field="*{id}" />
-    Name: <input type="text" th:field="*{name}" /><br/>
-    Email: <input type="email" th:field="*{email}" /><br/>
-    Percentage: <input type="text" th:field="*{percentage}" /><br/>
+<form method="post" th:action="@{/save}" th:object="${student}">
+    <input th:field="*{id}" type="hidden"/>
+    Name: <input th:field="*{name}" type="text"/><br/>
+    Email: <input th:field="*{email}" type="email"/><br/>
+    Percentage: <input th:field="*{percentage}" type="text"/><br/>
     <button type="submit">Save</button>
 </form>
 <a href="/">Back</a>

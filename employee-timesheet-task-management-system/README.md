@@ -1,24 +1,25 @@
 # 🧑‍💼 Employee Timesheet & Task Management System
 
-A real-time, enterprise-level **Spring Boot** application to manage employees, projects, tasks, timesheets, and leave records. Built using Java 21 and MySQL with clean layered architecture and RESTful APIs.
+A real-time, enterprise-level **Spring Boot** application to manage employees, projects, tasks, timesheets, and leave
+records. Built using Java 21 and MySQL with clean layered architecture and RESTful APIs.
 
 ---
 
 ## 🚀 Tech Stack
 
-| Layer            | Technology                     |
-|------------------|--------------------------------|
-| Language         | Java 21                        |
-| Framework        | Spring Boot 3.x                |
-| Database         | MySQL                          |
-| ORM              | Spring Data JPA (Hibernate)    |
-| Build Tool       | Maven                          |
-| Web Layer        | Spring Web (REST APIs)         |
+| Layer            | Technology                            |
+|------------------|---------------------------------------|
+| Language         | Java 21                               |
+| Framework        | Spring Boot 3.x                       |
+| Database         | MySQL                                 |
+| ORM              | Spring Data JPA (Hibernate)           |
+| Build Tool       | Maven                                 |
+| Web Layer        | Spring Web (REST APIs)                |
 | Error Handling   | Custom Exceptions + Controller Advice |
-| Logging          | SLF4J + Logback                |
-| JSON Processing  | Jackson                        |
-| Documentation    | Swagger (Optional)             |
-| Scheduler (Opt.) | Spring Scheduler               |
+| Logging          | SLF4J + Logback                       |
+| JSON Processing  | Jackson                               |
+| Documentation    | Swagger (Optional)                    |
+| Scheduler (Opt.) | Spring Scheduler                      |
 
 ---
 
@@ -36,7 +37,6 @@ com.shreya.timesheet
 └── EmployeeTimesheetTaskManagementApplication.java
 
 ````
-
 
 ---
 
@@ -67,7 +67,8 @@ spring.jackson.date-format=yyyy-MM-dd
 spring.jackson.time-zone=UTC
 
 ```
-Shreya Mahalle 
+
+Shreya Mahalle
 
 [GitHub](https://github.com/shreyamahalle) | [LinkedIn](https://linkedin.com/in/shreyamahalle)
 

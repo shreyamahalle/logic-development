@@ -4,6 +4,6 @@ public class Contact {
     int id;
     Address address;
     String emailId;
-    String  mobileNo;
+    String mobileNo;
 
 }
