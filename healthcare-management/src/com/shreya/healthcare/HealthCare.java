@@ -43,9 +43,21 @@ public class HealthCare {
                 Nurse nurse = healthCare.createNurse();
                 System.out.println("Nurse created " + nurse);
             }
-            if (option == 6){
+            if (option == 6) {
                 Hospital hospital = healthCare.createHospital();
                 System.out.println("Hospital created " + hospital);
+            }
+            if (option == 7) {
+                Billing billing = healthCare.createBilling();
+                System.out.println("Billing created " + billing);
+            }
+            if (option == 8) {
+                Address address = healthCare.createAddress();
+                System.out.println("Address created " + address);
+            }
+            if (option == 9) {
+                Prescription prescription = healthCare.createPrescription();
+                System.out.println("Prescription created " + prescription);
             }
         } while (option != 0);
     }
@@ -165,5 +177,61 @@ public class HealthCare {
         hospital.setEmailId(emailId);
         return hospital;
 
+    }
+
+    private Billing createBilling() {
+        System.out.println("Enter Billing Id");
+        int id = Integer.parseInt(scanner.nextLine());
+        System.out.println("Enter pId");
+        int pId = Integer.parseInt(scanner.nextLine());
+        System.out.println("Enter totalTax");
+        int totalTax = Integer.parseInt(scanner.nextLine());
+        System.out.println("Enter totalBill");
+        int totalBill = Integer.parseInt(scanner.nextLine());
+
+        Billing billing = new Billing();
+        billing.setId(id);
+        billing.setpId(pId);
+        billing.setTotalBill(totalBill);
+        billing.setTotalTax(totalTax);
+        return billing;
+    }
+
+    private Address createAddress() {
+        System.out.println("Enter address");
+        String address = scanner.nextLine();
+        System.out.println("Enter pinCode");
+        int pinCode = Integer.parseInt(scanner.nextLine());
+        System.out.println("Enter landMark");
+        String landMark = scanner.nextLine();
+        System.out.println("Enter buildingName");
+        String buildingName = scanner.nextLine();
+        System.out.println("Enter wing");
+        String wing = scanner.nextLine();
+        System.out.println("Enter buildingNo");
+        int buildingNo = Integer.parseInt(scanner.nextLine());
+
+        Address address1 = new Address();
+        address1.setAddress(address);
+        address1.setPinCode(pinCode);
+        address1.setLandMark(landMark);
+        address1.setWing(wing);
+        address1.setBuildingNo(buildingNo);
+        address1.setBuildingName(buildingName);
+        return address1;
+    }
+
+    private Prescription createPrescription() {
+        System.out.println("Enter prescriptionId");
+        int prescriptionId = Integer.parseInt(scanner.nextLine());
+        System.out.println("Enter prescriptionDetails");
+        String prescriptionDetails = scanner.nextLine();
+        System.out.println("Enter mobileNo");
+        String mobileNo = scanner.nextLine();
+        Prescription prescription = new Prescription();
+        prescription.setPrescriptionId(prescriptionId);
+        prescription.setPrescriptionDetails(prescriptionDetails);
+        prescription.setMobileNo(mobileNo);
+        return prescription;
     }
 }
