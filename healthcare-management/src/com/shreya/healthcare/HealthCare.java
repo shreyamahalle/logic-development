@@ -1,7 +1,7 @@
 package com.shreya.healthcare;
-
+import com.shreya.healthcare.model.Department;
+import com.shreya.healthcare.model.Doctor;
 import com.shreya.healthcare.model.Patient;
-
 import java.util.Scanner;
 
 public class HealthCare {
@@ -26,6 +26,14 @@ public class HealthCare {
             if(option == 1){
                Patient patient = healthCare.createPatient();
                System.out.println("Patient Created " + patient);
+            }
+            if (option == 2){
+                Department department = healthCare.createDepartment();
+                System.out.println("Department Created " + department);
+            }
+            if (option == 3){
+                Doctor doctor = healthCare.createDoctor();
+                System.out.println("Doctor created " + doctor);
             }
         }while (option !=0);
     }
@@ -59,7 +67,36 @@ public class HealthCare {
         patient.setPaymentDetails(paymentDetails);
         patient.setAge(age);
         patient.setGender(gender);
-
         return patient;
     }
+    private Department createDepartment(){
+        System.out.println("Enter dept id");
+        int id = Integer.parseInt(scanner.nextLine());
+        System.out.println("Enter dept name");
+        String deptName = scanner.nextLine();
+        System.out.println("Enter doctorId");
+        int doctorId = Integer.parseInt(scanner.nextLine());
+        Department department = new Department();
+        department.setDeptId(id);
+        department.setDeptName(deptName);
+        department.setDoctorId(doctorId);
+        return department;
+    }
+    private Doctor createDoctor(){
+        System.out.println("Enter Doctor Id");
+        int doctorId = Integer.parseInt(scanner.nextLine());
+        System.out.println("Enter Doctor Name");
+        String docName = scanner.nextLine();
+        System.out.println("Enter Doctor lName");
+        String docLName = scanner.nextLine();
+        System.out.println("Enter Doctor Mobile Number");
+        String  docMobileNo = (scanner.nextLine());
+        Doctor doctor = new Doctor();
+        doctor.setDoctorId(doctorId);
+        doctor.setDocName(docName);
+        doctor.setDocLName(docLName);
+        doctor.setDocMobileNo(docMobileNo);
+        return doctor;
+    }
 }
+
