@@ -1,7 +1,6 @@
 package com.shreya.healthcare;
-import com.shreya.healthcare.model.Department;
-import com.shreya.healthcare.model.Doctor;
-import com.shreya.healthcare.model.Patient;
+import com.shreya.healthcare.model.*;
+
 import java.util.Scanner;
 
 public class HealthCare {
@@ -34,6 +33,14 @@ public class HealthCare {
             if (option == 3){
                 Doctor doctor = healthCare.createDoctor();
                 System.out.println("Doctor created " + doctor);
+            }
+            if (option == 4){
+                Appointment appointment = healthCare.createAppointment();
+                System.out.println("Appointment created " + appointment);
+            }
+            if (option == 5){
+                Nurse nurse = healthCare.createNurse();
+                System.out.println("Nurse created " + nurse);
             }
         }while (option !=0);
     }
@@ -98,5 +105,33 @@ public class HealthCare {
         doctor.setDocMobileNo(docMobileNo);
         return doctor;
     }
+    private Appointment createAppointment(){
+        System.out.println("Enter Appointment Id ");
+        int appointmentId = Integer.parseInt(scanner.nextLine());
+        System.out.println("Enter patient Id ");
+        int patientId = Integer.parseInt(scanner.nextLine());
+        System.out.println("Enter doctor Id ");
+        int doctorId = Integer.parseInt(scanner.nextLine());
+        System.out.println("Enter dept Id ");
+        int deptId = Integer.parseInt(scanner.nextLine());
+        Appointment appointment = new Appointment();
+        appointment.setAppointmentId(appointmentId);
+        appointment.setDeptId(deptId);
+        appointment.setPatientId(patientId);
+        appointment.setDeptId(doctorId);
+        return appointment;
+    }
+    private Nurse createNurse(){
+        System.out.println("Enter Nurse Id");
+        int id = Integer.parseInt(scanner.nextLine());
+        System.out.println("Enter Nurse name");
+        String name = scanner.nextLine();
+        System.out.println("Enter Nurse lName");
+        String lName = scanner.nextLine();
+        Nurse nurse = new Nurse();
+        nurse.setId(id);
+        nurse.setlName(lName);
+        nurse.setName(name);
+        return nurse;
+    }
 }
-
