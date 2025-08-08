@@ -5,6 +5,7 @@ import java.util.Scanner;
 
 public class HealthCare {
     private static final Scanner scanner = new Scanner(System.in);
+
     public static void main(String[] args) {
         HealthCare healthCare = new HealthCare();
         int option = 0;
@@ -22,30 +23,34 @@ public class HealthCare {
             System.out.println("9. Create Prescription:");
             System.out.println("10. Exit Project:");
             option = Integer.parseInt(scanner.nextLine());
-            if(option == 1){
-               Patient patient = healthCare.createPatient();
-               System.out.println("Patient Created " + patient);
+            if (option == 1) {
+                Patient patient = healthCare.createPatient();
+                System.out.println("Patient Created " + patient);
             }
-            if (option == 2){
+            if (option == 2) {
                 Department department = healthCare.createDepartment();
                 System.out.println("Department Created " + department);
             }
-            if (option == 3){
+            if (option == 3) {
                 Doctor doctor = healthCare.createDoctor();
                 System.out.println("Doctor created " + doctor);
             }
-            if (option == 4){
+            if (option == 4) {
                 Appointment appointment = healthCare.createAppointment();
                 System.out.println("Appointment created " + appointment);
             }
-            if (option == 5){
+            if (option == 5) {
                 Nurse nurse = healthCare.createNurse();
                 System.out.println("Nurse created " + nurse);
             }
-        }while (option !=0);
+            if (option == 6){
+                Hospital hospital = healthCare.createHospital();
+                System.out.println("Hospital created " + hospital);
+            }
+        } while (option != 0);
     }
 
-    private Patient createPatient(){
+    private Patient createPatient() {
         System.out.println("Enter id");
         int id = Integer.parseInt(scanner.nextLine());
         System.out.println("Enter fName");
@@ -57,7 +62,7 @@ public class HealthCare {
         System.out.println("Enter alternativeMobileNo");
         String alternativeMobileNo = (scanner.nextLine());
         System.out.println("Enter address");
-        String  address = (scanner.nextLine());
+        String address = (scanner.nextLine());
         System.out.println("Enter paymentDetails");
         String paymentDetails = (scanner.nextLine());
         System.out.println("Enter age");
@@ -67,7 +72,8 @@ public class HealthCare {
         Patient patient = new Patient();
         patient.setId(id);
         patient.setfName(fName);
-        patient.setlName(lName);;
+        patient.setlName(lName);
+        ;
         patient.setMobileNo(mobileNo);
         patient.setAlternativeMobileNo(alternativeMobileNo);
         patient.setAddress(address);
@@ -76,7 +82,8 @@ public class HealthCare {
         patient.setGender(gender);
         return patient;
     }
-    private Department createDepartment(){
+
+    private Department createDepartment() {
         System.out.println("Enter dept id");
         int id = Integer.parseInt(scanner.nextLine());
         System.out.println("Enter dept name");
@@ -89,7 +96,8 @@ public class HealthCare {
         department.setDoctorId(doctorId);
         return department;
     }
-    private Doctor createDoctor(){
+
+    private Doctor createDoctor() {
         System.out.println("Enter Doctor Id");
         int doctorId = Integer.parseInt(scanner.nextLine());
         System.out.println("Enter Doctor Name");
@@ -97,7 +105,7 @@ public class HealthCare {
         System.out.println("Enter Doctor lName");
         String docLName = scanner.nextLine();
         System.out.println("Enter Doctor Mobile Number");
-        String  docMobileNo = (scanner.nextLine());
+        String docMobileNo = (scanner.nextLine());
         Doctor doctor = new Doctor();
         doctor.setDoctorId(doctorId);
         doctor.setDocName(docName);
@@ -105,7 +113,8 @@ public class HealthCare {
         doctor.setDocMobileNo(docMobileNo);
         return doctor;
     }
-    private Appointment createAppointment(){
+
+    private Appointment createAppointment() {
         System.out.println("Enter Appointment Id ");
         int appointmentId = Integer.parseInt(scanner.nextLine());
         System.out.println("Enter patient Id ");
@@ -121,7 +130,8 @@ public class HealthCare {
         appointment.setDeptId(doctorId);
         return appointment;
     }
-    private Nurse createNurse(){
+
+    private Nurse createNurse() {
         System.out.println("Enter Nurse Id");
         int id = Integer.parseInt(scanner.nextLine());
         System.out.println("Enter Nurse name");
@@ -133,5 +143,27 @@ public class HealthCare {
         nurse.setlName(lName);
         nurse.setName(name);
         return nurse;
+    }
+
+    private Hospital createHospital() {
+        System.out.println("Enter Hospital Id");
+        int hospitalId = Integer.parseInt(scanner.nextLine());
+        System.out.println("Enter hospitalName");
+        String hospitalName = scanner.nextLine();
+        System.out.println("Enter hospitalAddress");
+        String hospitalAddress = scanner.nextLine();
+        System.out.println("Enter emailId");
+        String emailId = scanner.nextLine();
+        System.out.println("Enter contactNo");
+        String contactNo = scanner.nextLine();
+
+        Hospital hospital = new Hospital();
+        hospital.setHospitalId(hospitalId);
+        hospital.setHospitalName(hospitalName);
+        hospital.setContactNo(contactNo);
+        hospital.setHospitalAddress(hospitalAddress);
+        hospital.setEmailId(emailId);
+        return hospital;
+
     }
 }
