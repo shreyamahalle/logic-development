@@ -85,7 +85,6 @@ public class HealthCare {
         patient.setId(id);
         patient.setfName(fName);
         patient.setlName(lName);
-        ;
         patient.setMobileNo(mobileNo);
         patient.setAlternativeMobileNo(alternativeMobileNo);
         patient.setAddress(address);
