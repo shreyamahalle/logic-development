@@ -1,6 +1,4 @@
 package com.shreya.healthcare.service;
-
-import com.shreya.healthcare.model.Address;
 import com.shreya.healthcare.model.Patient;
 
 import java.util.Scanner;
@@ -9,7 +7,6 @@ public class PatientService {
     private static final Scanner scanner = new Scanner(System.in);
     public static final Patient patient = new Patient();
     private final Patient[] patients = new Patient[5];
-
 
     public Patient createPatient() {
         System.out.println("Enter id");

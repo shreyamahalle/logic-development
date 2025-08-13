@@ -1,6 +1,7 @@
 package com.shreya.healthcare;
 import com.shreya.healthcare.model.*;
 import com.shreya.healthcare.service.AddressService;
+import com.shreya.healthcare.service.DepartmentService;
 import com.shreya.healthcare.service.PatientService;
 
 import java.util.Scanner;
@@ -12,6 +13,7 @@ public class HealthCare {
         HealthCare healthCare = new HealthCare();
         AddressService addressService = new AddressService();
         PatientService patientService = new PatientService();
+        DepartmentService departmentService = new DepartmentService();
 
         int option = 0;
         do {
@@ -34,7 +36,7 @@ public class HealthCare {
                     System.out.println("Patient Created: " + patient);
                     break;
                 case 2:
-                    Department department = healthCare.createDepartment();
+                    Department department = departmentService.createDepartment();
                     System.out.println("Department Created: " + department);
                     break;
                 case 3:
@@ -73,20 +75,6 @@ public class HealthCare {
             }
 
         } while (option != 0);
-    }
-
-    private Department createDepartment() {
-        System.out.println("Enter dept id");
-        int id = Integer.parseInt(scanner.nextLine());
-        System.out.println("Enter dept name");
-        String deptName = scanner.nextLine();
-        System.out.println("Enter doctorId");
-        int doctorId = Integer.parseInt(scanner.nextLine());
-        Department department = new Department();
-        department.setDeptId(id);
-        department.setDeptName(deptName);
-        department.setDoctorId(doctorId);
-        return department;
     }
 
     private Doctor createDoctor() {

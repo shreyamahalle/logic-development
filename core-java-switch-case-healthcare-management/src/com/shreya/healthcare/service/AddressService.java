@@ -7,7 +7,6 @@ import java.util.Scanner;
 public class AddressService {
 
     private static final Scanner scanner = new Scanner(System.in);
-    static final Address address = new Address();
     private final Address[] addresses = new Address[5];
 
     void printCustomer(Address address){
