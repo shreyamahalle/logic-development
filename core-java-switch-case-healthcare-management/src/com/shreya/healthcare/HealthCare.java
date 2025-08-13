@@ -5,10 +5,10 @@ import com.shreya.healthcare.service.*;
 import java.util.Scanner;
 
 public class HealthCare {
+
     private static final Scanner scanner = new Scanner(System.in);
 
     public static void main(String[] args) {
-        HealthCare healthCare = new HealthCare();
         AddressService addressService = new AddressService();
         PatientService patientService = new PatientService();
         DepartmentService departmentService = new DepartmentService();
