@@ -8,8 +8,13 @@ public class AddressService {
 
     private static final Scanner scanner = new Scanner(System.in);
     static final Address address = new Address();
+    private final Address[] addresses = new Address[5];
 
-    private Address createAddress() {
+    void printCustomer(Address address){
+        System.out.println(address);
+    }
+    public Address createAddress() {
+        Address address1 = new Address();
         System.out.println("Enter address");
         String address = scanner.nextLine();
         System.out.println("Enter pinCode");
@@ -23,7 +28,6 @@ public class AddressService {
         System.out.println("Enter buildingNo");
         int buildingNo = Integer.parseInt(scanner.nextLine());
 
-        Address address1 = new Address();
         address1.setAddress(address);
         address1.setPinCode(pinCode);
         address1.setLandMark(landMark);
@@ -31,5 +35,10 @@ public class AddressService {
         address1.setBuildingNo(buildingNo);
         address1.setBuildingName(buildingName);
         return address1;
+    }
+    public void displayAddress(){
+        for (Address address1 : addresses){
+            System.out.println("Address info: " + address1);
+        }
     }
 }

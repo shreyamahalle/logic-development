@@ -1,5 +1,7 @@
 package com.shreya.healthcare;
 import com.shreya.healthcare.model.*;
+import com.shreya.healthcare.service.AddressService;
+import com.shreya.healthcare.service.PatientService;
 
 import java.util.Scanner;
 
@@ -8,6 +10,9 @@ public class HealthCare {
 
     public static void main(String[] args) {
         HealthCare healthCare = new HealthCare();
+        AddressService addressService = new AddressService();
+        PatientService patientService = new PatientService();
+
         int option = 0;
         do {
             System.out.println("----------------Health-Care Management----------------");
@@ -25,7 +30,7 @@ public class HealthCare {
             option = Integer.parseInt(scanner.nextLine());
             switch (option) {
                 case 1:
-                    Patient patient = healthCare.createPatient();
+                    Patient patient = patientService.createPatient();
                     System.out.println("Patient Created: " + patient);
                     break;
                 case 2:
@@ -53,7 +58,7 @@ public class HealthCare {
                     System.out.println("Billing Created: " + billing);
                     break;
                 case 8:
-                    Address address = healthCare.createAddress();
+                    Address address = addressService.createAddress();
                     System.out.println("Address Created: " + address);
                     break;
                 case 9:
@@ -68,39 +73,6 @@ public class HealthCare {
             }
 
         } while (option != 0);
-    }
-
-
-    private Patient createPatient() {
-        System.out.println("Enter id");
-        int id = Integer.parseInt(scanner.nextLine());
-        System.out.println("Enter fName");
-        String fName = (scanner.nextLine());
-        System.out.println("Enter lName");
-        String lName = scanner.nextLine();
-        System.out.println("Enter mobileNo");
-        String mobileNo = (scanner.nextLine());
-        System.out.println("Enter alternativeMobileNo");
-        String alternativeMobileNo = (scanner.nextLine());
-        System.out.println("Enter address");
-        String address = (scanner.nextLine());
-        System.out.println("Enter paymentDetails");
-        String paymentDetails = (scanner.nextLine());
-        System.out.println("Enter age");
-        int age = Integer.parseInt(scanner.nextLine());
-        System.out.println("Enter gender");
-        String gender = (scanner.nextLine());
-        Patient patient = new Patient();
-        patient.setId(id);
-        patient.setfName(fName);
-        patient.setlName(lName);
-        patient.setMobileNo(mobileNo);
-        patient.setAlternativeMobileNo(alternativeMobileNo);
-        patient.setAddress(address);
-        patient.setPaymentDetails(paymentDetails);
-        patient.setAge(age);
-        patient.setGender(gender);
-        return patient;
     }
 
     private Department createDepartment() {
@@ -203,30 +175,6 @@ public class HealthCare {
         billing.setTotalBill(totalBill);
         billing.setTotalTax(totalTax);
         return billing;
-    }
-
-    private Address createAddress() {
-        System.out.println("Enter address");
-        String address = scanner.nextLine();
-        System.out.println("Enter pinCode");
-        int pinCode = Integer.parseInt(scanner.nextLine());
-        System.out.println("Enter landMark");
-        String landMark = scanner.nextLine();
-        System.out.println("Enter buildingName");
-        String buildingName = scanner.nextLine();
-        System.out.println("Enter wing");
-        String wing = scanner.nextLine();
-        System.out.println("Enter buildingNo");
-        int buildingNo = Integer.parseInt(scanner.nextLine());
-
-        Address address1 = new Address();
-        address1.setAddress(address);
-        address1.setPinCode(pinCode);
-        address1.setLandMark(landMark);
-        address1.setWing(wing);
-        address1.setBuildingNo(buildingNo);
-        address1.setBuildingName(buildingName);
-        return address1;
     }
 
     private Prescription createPrescription() {
